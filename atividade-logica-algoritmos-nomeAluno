@@ -1,0 +1,33 @@
+Algoritmo ControleDeAcessoSala
+Var
+    listaOficial: vetor de texto
+    filaAlunos: vetor de texto
+    alunoAtual: texto
+    totalFila: inteiro
+    contador: inteiro
+    estaNaLista: logico
+    i: inteiro
+
+Inicio
+    totalFila <- tamanho(filaAlunos)
+    contador <- 1
+
+    Enquanto contador <= totalFila Faça
+        alunoAtual <- filaAlunos[contador]
+        estaNaLista <- Falso
+
+        Para i de 1 ate tamanho(listaOficial) Faça
+            Se listaOficial[i] = alunoAtual Entao
+                estaNaLista <- Verdadeiro
+            FimSe
+        FimPara
+
+        Se estaNaLista = Verdadeiro Entao
+            Escreva("Entrada permitida: ", alunoAtual, " está na lista.")
+        Senao
+            Escreva("ERRO: Entrada negada: ", alunoAtual, " você não está na lista oficial.")
+        FimSe
+
+        contador <- contador + 1
+    FimEnquanto
+Fim
