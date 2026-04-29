@@ -1,6 +1,6 @@
-# 🎨 Design e Arquitetura do Sistema
+# Design e Arquitetura do Sistema
 
-## 📐 Arquitetura Geral
+## Arquitetura Geral
 
 ### Padrão Arquitetural: MVC + API REST
 
@@ -30,9 +30,9 @@
 └─────────────┘
 ```
 
-## 🧩 Decomposição Modular
+## Decomposição Modular
 
-### 1️⃣ Módulo de Autenticação
+###  Módulo de Autenticação
 
 **Responsabilidades:**
 - Registro de novos usuários
@@ -53,7 +53,7 @@ POST /api/auth/login → Validar credenciais → Gerar JWT → Retornar token
 
 ---
 
-### 2️⃣ Módulo de Gestão de Usuários
+###  Módulo de Gestão de Usuários
 
 **Responsabilidades:**
 - CRUD de usuários
@@ -75,7 +75,7 @@ DELETE /api/users/:id      # Deletar usuário
 
 ---
 
-### 3️⃣ Módulo de Gestão de Demandas
+###  Módulo de Gestão de Demandas
 
 **Responsabilidades:**
 - Criação de demandas
@@ -114,7 +114,7 @@ DELETE /api/demandas/:id   # Deletar demanda
 
 ---
 
-### 4️⃣ Módulo de Processamento de Status
+###  Módulo de Processamento de Status
 
 **Responsabilidades:**
 - Máquina de estados finitos
@@ -137,7 +137,7 @@ em_andamento → aprovado | rejeitado
 aprovado → concluido
 ```
 
-### 5️⃣ Módulo de Relatórios
+###  Módulo de Relatórios
 
 **Responsabilidades:**
 - Dashboard com métricas
@@ -159,7 +159,7 @@ aprovado → concluido
 
 ---
 
-## 🗄️ Modelagem de Dados
+## Modelagem de Dados
 
 ### Diagrama ER
 
@@ -213,7 +213,7 @@ CREATE INDEX idx_demandas_created ON demandas(created_at);
 
 ---
 
-## 🔄 Fluxos de Dados
+##  Fluxos de Dados
 
 ### Fluxo de Criação de Demanda
 
